@@ -11,31 +11,35 @@ int main() {
     printf ("Desafio Super Trunfo - Países\n");
 
     printf ("Estado: ");
-    fgets (estado, sizeof(estado), stdin);
+    fgets (estado, sizeof(estado), stdin); //Para coletar nomes com espaços
 
     printf ("Nome da cidade: ");
-    fgets (nome_cidade, sizeof(nome_cidade), stdin);
+    fgets (nome_cidade, sizeof(nome_cidade), stdin); //Para coletar nomes com espaços
 
-    printf ("População total da cidade: %d \n");
-    scanf (" %d, &populacao");
+    printf ("População total da cidade: ");
+    scanf ("%d", &populacao);
 
-    printf("Qual PIB da cidade: %.f \n");
-    scanf ("%.f, &pib");
+    printf("Qual PIB da cidade: ");
+    scanf ("%f", &pib);
 
-    printf ("Quantos pontos turistico a cidade possui: %d \n");
-    scanf ( "%d, &turistico");
+    printf ("Quantos pontos turistico a cidade possui: ");
+    scanf ( "%d", &turistico);
 
-    printf ("Qual a área total da cidade: %2f Km²\n");
-    scanf ("%.f, &area");
+    printf ("Qual a área total da cidade: ");
+    scanf ("%f", &area);
+
+    printf ("Defina o ID da sua carta (Primeira Letra e um núemro)");
+    scanf ("%s \n", ID_cidade);
+
 // Imprimir na tela o restultado dos dados coletados acima
     printf ("Super Trunfo - Países \n");
 
     printf ("Identificação da cidade: %s \n.", ID_cidade);
     printf ("Estado: %s \n", estado);
     printf ("Nome da cidade: %s \n.", nome_cidade);
-    printf ("Cidade de %s", ID_cidade, "possui total de %d pessoas. \n", populacao);
-    printf ("Cidade de %s", ID_cidade ,"tem sua área de %.2f metros quadrados.", area);
-    printf ("Cidade de %s", ID_cidade ,"tem %d pontos turístico.\n", turistico);
-    printf ("Cidade de %s", ID_cidade ,"tem seu Podruto Interno Bruto - PIB de: %.3f", pib);
+    printf ("Cidade de %s possui total de %d pessoas.\n", ID_cidade, populacao);
+    printf ("Cidade de %s tem sua área de %.2f metos quadrados.\n", ID_cidade, area);
+    printf ("Cidade de %s tem %d pontos turísticos.\n", ID_cidade, turistico);
+    printf ("Cidade de %s tem seu Produto Interno Bruto - PIB de %.2f.\n", ID_cidade, pib);
     return 0;
 }
